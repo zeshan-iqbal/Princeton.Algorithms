@@ -7,7 +7,7 @@ namespace Week1.UF
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            var uf = new UnionFind(10);
+            var uf = new QuickUnionFind(10);
 
             uf.Union(1, 2);
             uf.Union(4, 6);
@@ -15,6 +15,9 @@ namespace Week1.UF
             uf.Union(6, 9);
 
             Console.WriteLine(uf.IsConnected(1, 6));
+            Console.WriteLine(uf.IsConnected(3, 6));
+            Console.WriteLine(uf.IsConnected(4, 9));
+            Console.WriteLine(uf.IsConnected(0, 9));
         }
     }
 }
